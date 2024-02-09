@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "qvJrmk_WZFVtyUgx0",
+            });
+        })();
+        </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -319,23 +331,68 @@
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
             <!-- contact form -->
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+            <!-- <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                        <input type="text" id="name" size="50" class="form-control" placeholder="Your Name" required >
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email" requried>
+                        <input type="email" id="email" class="form-control" placeholder="Enter Email" requried >
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="text" id="subject" class="form-control" placeholder="Enter Subject " requried >
                     </div>
                     <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6" class="form-control"
+                        <textarea name="message" id="message" rows="6" class="form-control"
                             placeholder="Write Something"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                        <button onclick="sendMail()" type="submit"  class="btn btn-outline-primary rounded">Send Message</button>
                     </div>
                 </div>
-            </form><!-- end of contact form -->
+            </form>
+            end of contact form -->
+            <section class="section" id="contact">
+                
+                    
+                    <div class="container text-center">
+                       
+                        <div class="contact-form padd-15">
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" id="name" class="form-control" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <div class="form-group">
+                                        <input type="email" id="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <div class="form-group">
+                                        <textarea name="" id="message" class="form-control" placeholder="Message" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" class="btn btn-outline-primary rounded" onclick="sendMail()">Submit Form</button>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                
+            </section>
         </div><!-- end of container -->
     </section><!-- end of contact section -->
 
@@ -365,6 +422,9 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
+    <script src="index.js"></script>
+    
+    
 
 </body>
 
